@@ -1,7 +1,7 @@
 # Programación con Objetos I - Comisión 2
 ## Parcialito 28-5-2018
 
-### Clubes
+### Clubes 
 En un municipio, los clubes de barrio están regulados de manera tal que se puede saber la calidad de cada uno. Se pide modelar utilizando el paradigma de objetos el dominio de un sistema que facilite la administración de estos clubes.
 
 Cada club debe poder ser evaluado. Al hacerlo se determina un número (no acotado) de puntos que se calcula a partir de las actividades que allí funcionan, tales como los equipos que practican deportes o las actividades sociales que periódicamente realizan algunos de sus socios.

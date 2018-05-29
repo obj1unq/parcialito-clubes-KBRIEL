@@ -45,14 +45,19 @@ class Club {
 	
 	method transferirJugadores(jugador,equipo){
 		return if((equipos.contain({equipo}))
-			or (equipo.capitan()))
+			or (equipo.capitan()==jugador))
 			{self.error("no se puede transferir")}
-			else{self.transferir()}
+			else{self.iniciarTransferencia(jugador, equipo)}
 			 
 	}
 	
-	method transferir(){
-		//sin terminar
+	method iniciarTransferencia(socio, equipo){
+		actividadesSociales.forEach({act=>act.removerSocio(socio)})
+		equipos.forEach({act=>act.removerSocio(socio)})
+		equipo.nuevoSocio(socio)
+		socios.remove(socio)
+		equipo.socios().add(socio)
+		socio.sinPartidos()
 	}
 	
 }
@@ -96,6 +101,7 @@ class Actividad {
 
 	method calificacion() = calificacion
 	method removerSocio(socio)
+	method nuevoSocio(socio)
 }
 
 //socio

@@ -28,6 +28,9 @@ class ActividadSocial inherits Actividad {
 	
 	override method removerSocio(socio)=
 	sociosParticipantes.remove(socio)
+	
+	override method nuevoSocio(socio)=
+	sociosParticipantes.add(socio)
 
 }
 

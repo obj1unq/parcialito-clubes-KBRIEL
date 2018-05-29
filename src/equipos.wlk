@@ -34,6 +34,9 @@ class Equipo inherits Actividad {
 	
 	override method removerSocio(socio)=
 	plantel.remove(socio)
+	
+	override method nuevoSocio(socio)=
+	plantel.add(socio)
 
 }
 
@@ -44,6 +47,8 @@ class Jugador inherits Socio{
 	
 
 	override method esEstrella() = partidosJugados >= 50 or club.perfil().paseEstrella(self)
-
+	method sinPartidos(){
+		partidosJugados=0
+	}
 }
 
